@@ -25,7 +25,9 @@ rds_sg_ingress_rules = {
   https = {
     from_port   = 3306
     to_port     = 3306
+    protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
+    security_groups = []
   }
 }
 rds_sg_egress_rules = {
@@ -34,6 +36,7 @@ rds_sg_egress_rules = {
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
+    security_groups = []
   }
 }
 
