@@ -41,21 +41,8 @@ module "RDS" {
     rds_engine_version = var.rds_engine_version
     rds_instance_class = var.rds_instance_class
     rds_multi_az = var.rds_multi_az
-    rds_sg_ingress_rules = {
-        https = {
-              from_port   = 3306
-              to_port     = 3306
-              cidr_blocks = ["0.0.0.0/0"]
-        }
-    }
-    rds_sg_egress_rules = {
-        https = {
-             from_port   = 0
-             to_port     = 0
-             protocol    = "-1"
-             cidr_blocks = ["0.0.0.0/0"]
-        }
-    }
+    rds_sg_ingress_rules = var.rds_sg_ingress_rules
+    rds_sg_egress_rules = var.rds_sg_egress_rules
     vpc_id = module.HA-VPC.vpc_id
     rds_publicly_accessible = var.rds_publicly_accessible
     rds_storage_encrypted = var.rds_storage_encrypted
