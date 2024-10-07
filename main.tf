@@ -55,7 +55,7 @@ module "EFS" {
     env = var.env
     efs_private_subnets = module.HA-VPC.private_subnets
     vpc_id = module.HA-VPC.vpc_id
-    ec2_sg_id = module.rdssg.rds_sg_id
+    ec2_sg_id = module.RDS.rds_sg_id
 }
 data "template_file" "user_data" {
   template = file("./templates/user_data.tpl")
