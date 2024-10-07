@@ -32,7 +32,7 @@ module "Private-RTA" {
 }
 module "RDS" {
   source  = "app.terraform.io/shashiorg/RDS/aws"
-  version = "0.0.1"
+  version = "0.0.2"
     env = var.env
     rds_privatesubnets = module.HA-VPC.private_subnets
     rds_allocated_storage = var.rds_allocated_storage
