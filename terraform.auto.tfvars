@@ -15,7 +15,7 @@ rds_allocated_storage = 20
 rds_storage_type      = "gp2"
 rds_engine           = "mysql"
 rds_engine_version   = "5.7"
-rds_instance_class   = "db.t2.micro"
+rds_instance_class   = "db.m5.large"
 rds_multi_az         = true
 rds_backup_retention_period = 7
 rds_publicly_accessible = false
@@ -40,5 +40,5 @@ rds_sg_egress_rules = {
   }
 }
 
-instance_type = "t3a.medium"
+instance_type = "t2.micro"
 ami_id        = "ami-09298640a92b2d12c" # Replace with a valid AMI ID for your region
