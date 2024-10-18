@@ -41,4 +41,4 @@ rds_sg_egress_rules = {
 }
 
 instance_type = "t2.micro"
-ami_id        = "ami-09298640a92b2d12c" # Replace with a valid AMI ID for your region
+ami_id        = "ami-04a37924ffe27da53" # Replace with a valid AMI ID for your region
